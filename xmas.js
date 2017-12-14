@@ -67,6 +67,7 @@
         }
         xlsf = new XLSF(document.getElementById('lights'), lightImg, lightSize ? lightSize : 32, soundFiles);
         xlsf.initSounds();
+        window.xmas = true;
     }
 
     function init() {
@@ -90,13 +91,16 @@
             }, defaultOptions: { volume: 100 }
         });
     }
-    initStyles();
 
-    ljs.load([
-        xmas_domain + '/assets/yahoo-dom-event.js',
-        xmas_domain + '/assets/soundmanager2-nodebug-jsmin.js',
-        xmas_domain + '/assets/animation-min.js'
-    ],
-    xmas_domain + '/assets/christmaslights.js',
-    init);
+    if(!window.xmas) {
+        initStyles();
+
+        ljs.load([
+            xmas_domain + '/assets/yahoo-dom-event.js',
+            xmas_domain + '/assets/soundmanager2-nodebug-jsmin.js',
+            xmas_domain + '/assets/animation-min.js'
+        ],
+        xmas_domain + '/assets/christmaslights.js',
+        init);
+    }
 })();
