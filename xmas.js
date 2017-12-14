@@ -33,7 +33,8 @@
     function initStyles() {
         var e = document.createElement('style');
         e.innerHTML = ' .xlsf-light {\n' +
-            '            position: absolute;\n' +
+        '            position: absolute;\n' +
+        '            z-index: 99999;\n' +
             '        }\n' +
             '\n' +
             '        body.fast .xlsf-light {\n' +
