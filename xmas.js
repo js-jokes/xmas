@@ -77,9 +77,9 @@
         // e.style.paddingTop = parseInt(lightSize * 0.75).toString() + "px";
         e.style.display = "block";
         e.style.position = "absolute";
-        e.style.top = "0";
-        e.style.left = "0";
-        e.style.zIndex = 9999;
+        e.style.top = "-4px";
+        e.style.left = "0px";
+        e.style.zIndex = 99999;
 
         document.getElementsByTagName('body').item(0).appendChild(e);
 
