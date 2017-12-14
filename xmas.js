@@ -34,7 +34,6 @@
         var e = document.createElement('style');
         e.innerHTML = ' .xlsf-light {\n' +
         '            position: absolute;\n' +
-        '            z-index: 99999;\n' +
             '        }\n' +
             '\n' +
             '        body.fast .xlsf-light {\n' +
@@ -74,7 +73,13 @@
         var e = document.createElement('div');
         e.innerHTML = '';
         e.id = 'lights';
-        e.style.paddingTop = parseInt(lightSize * 0.75).toString() + "px";
+        // e.style.paddingTop = parseInt(lightSize * 0.75).toString() + "px";
+        e.style.display = "block";
+        e.style.position = "absolute";
+        e.style.top = "39px";
+        e.style.left = "250px";
+        e.style.zIndex = 9999;
+
         document.getElementsByTagName('body').item(0).appendChild(e);
 
         soundManager.setup({
